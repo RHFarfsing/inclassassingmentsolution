@@ -13,9 +13,10 @@ namespace InClassAssignmentProject {
             Description = description;
             MinSat = minsat;
             }
+
         public void Print() {
-            Console.WriteLine($"Id={Id},Desc={Description},Min={MinSat}");
+            Console.WriteLine($"Id is {Id}, Desc is {Description}, MinSAT is {MinSat}");
             }
 
-        }//class=========================================================
+        }//class===============================================================================================
     }

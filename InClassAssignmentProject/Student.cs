@@ -8,18 +8,23 @@ namespace InClassAssignmentProject {
         public string Firstname;
         public string Lastname;
         public int SAT;
-        public decimal GPA;
-        public int MajorId;
-        public Student(int id,string firstname,string lastname,int sat,decimal gpa, int majorid) {
+        public double GPA;
+        public Major Major;
+
+        public Student(int id,string firstname,string lastname,int sat,double gpa,Major major) {
             Id = id;
             Firstname = firstname;
             Lastname = lastname;
             SAT = sat;
             GPA = gpa;
-            MajorId = majorid;
-            }
+            Major = major;
+            }   
+
         public void Print() {
-            Console.WriteLine($"Id={Id},Firstname={Firstname},Lastname={Lastname},SAT={SAT},GPA={GPA},MajorId={MajorId}");
+            Console.WriteLine($"Id is {Id}, Name is {Firstname} {Lastname},"+
+                $" SAT is {SAT}, GPA is {GPA}, Major is {Major.Description}"+
+                $", MinSat Required is {Major.MinSat}");
             }
-        }//class======================================
+
+        }//class=================================================================================================
     }
